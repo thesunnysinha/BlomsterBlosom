@@ -20,4 +20,10 @@ chmod +x manage_database.sh
 
 ## Start the project
 
+    flask db init
+
+    flask db migrate -m "first migrate"
+
+    flask db upgrade
+
     python app.py
