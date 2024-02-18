@@ -5,6 +5,10 @@ from db import db,bcrypt
 from .models import User,Forest,ForestOwner,BotanicalOwner
 from flasgger import swag_from
 from flask_jwt_extended import create_access_token,create_refresh_token
+import logging
+
+# Configure logging
+logging.basicConfig(filename='api.log', level=logging.DEBUG)
 
 combined_forest_owner_data_schema = CombinedForestOwnerDataSchema()
 combined_botanical_owner_data_schema = CombinedBotanicalOwnerDataSchema()
@@ -147,6 +151,7 @@ class BotanicalOwnerResource(Resource):
         },
     })
     def post(self):
+        logging.info('Received POST request for /api/forest_owner')
         data = request.json
 
         # Validate the incoming data
@@ -175,6 +180,7 @@ class BotanicalOwnerResource(Resource):
                 db.session.commit()
             except Exception as e:
                 print(str(e))
+                logging.exception('An exception occurred: %s', str(e))
                 return {"error": str(e)}, 500
             return {"message": "BotanicalOwner created successfully"}, 201
         except Exception as e:
