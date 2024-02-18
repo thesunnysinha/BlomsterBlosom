@@ -1,6 +1,10 @@
 ## Create VirtualEnv
 
+    python -m venv venv
+
 ## Activate virtualenv
+
+    venv\Scripts\activate
 
 pip install -r requirements.txt
 
@@ -16,7 +20,7 @@ chmod +x manage_database.sh
 
 ## For Api's Documenatation
 
-    http://127.0.0.1:5000/apidocs/ 
+    http://127.0.0.1:5000/apidocs/
 
 ## Start the project
 
