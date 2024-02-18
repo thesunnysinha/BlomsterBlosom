@@ -1,0 +1,89 @@
+from flask_restful import Resource
+from main.serializers import CombinedForestOwnerDataSchema
+from flask import request
+from app import db
+from main.models import User,Forest,ForestOwner
+from flasgger import swag_from
+combined_forest_owner_data_schema = CombinedForestOwnerDataSchema()
+
+class ForestOwnerResource(Resource):
+    """
+    ForestOwnerResource API.
+
+    This resource handles the creation of ForestOwner and Forest instances.
+    """
+
+    @swag_from({
+        'tags': ['ForestOwner'],
+        'description': 'Create a new ForestOwner and associated Forest.',
+        'parameters': [
+            {
+                'name': 'data',
+                'description': 'JSON data for creating ForestOwner and Forest.',
+                'in': 'body',
+                'required': True,
+                'schema': {
+                    'type': 'object',
+                    'properties': {
+                        'username': {'type': 'string', 'maxLength': 50, 'minLength': 1},
+                        'password': {'type': 'string', 'maxLength': 100, 'minLength': 1},
+                        'email': {'type': 'string', 'format': 'email', 'maxLength': 100, 'minLength': 1},
+                        'role': {'type': 'string', 'enum': ['Forest Owner', 'Botanical Owner']},
+                        'subscription_type': {'type': 'string', 'enum': ['Free', 'Premium']},
+                        'owner_name': {'type': 'string', 'maxLength': 100, 'minLength': 1},
+                        'contact_number': {'type': 'string', 'maxLength': 20},
+                        'address': {'type': 'string', 'maxLength': 200},
+                        'forest_name': {'type': 'string', 'maxLength': 100, 'minLength': 1},
+                        'location': {'type': 'string', 'maxLength': 100, 'minLength': 1},
+                        'soil_type': {'type': 'string', 'maxLength': 50, 'minLength': 1},
+                    },
+                    'required': ['username', 'password', 'email', 'role', 'subscription_type', 'owner_name', 'forest_name', 'location', 'soil_type'],
+                },
+            },
+        ],
+        'responses': {
+            '201': {
+                'description': 'ForestOwner and Forest created successfully.',
+            },
+            '400': {
+                'description': 'Validation error in the input data.',
+            },
+            '500': {
+                'description': 'Internal server error.',
+            },
+        },
+    })
+    def post(self):
+        data = request.json
+
+        # Validate the incoming data
+        errors = combined_forest_owner_data_schema.validate(data)
+        if errors:
+            return {"error": errors}, 400
+
+        # Extract data for creating User, ForestOwner, and Forest
+        user_data = {key: data[key] for key in ['username', 'password', 'email', 'role', 'subscription_type']}
+        owner_data = {key: data[key] for key in ['owner_name', 'contact_number', 'address']}
+        forest_data = {key: data[key] for key in ['forest_name', 'location', 'soil_type']}
+
+        # Create User
+        new_user = User(**user_data)
+        db.session.add(new_user)
+        db.session.flush()  # Flush to get the auto-generated user_id
+
+        # Create ForestOwner
+        new_forest_owner = ForestOwner(user_id=new_user.user_id, **owner_data)
+        db.session.add(new_forest_owner)
+
+        # Create Forest
+        new_forest = Forest(owner_id=new_forest_owner.owner_id, **forest_data)
+        db.session.add(new_forest)
+
+        try:
+            db.session.commit()
+            return {"message": "ForestOwner and Forest created successfully"}, 201
+        except Exception as e:
+            db.session.rollback()
+            return {"error": str(e)}, 500
+        finally:
+            db.session.close()
