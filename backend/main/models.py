@@ -1,4 +1,4 @@
-from app import db
+from db import db
 from sqlalchemy import Enum
 
 class User(db.Model):
@@ -15,7 +15,7 @@ class ForestOwner(db.Model):
     owner_name = db.Column(db.String(100), nullable=False)
     contact_number = db.Column(db.String(20), nullable=True)
     address = db.Column(db.String(200), nullable=True)
-    forest = db.relationship('Forest', backref='owner', uselist=False, lazy='dynamic')
+    forest = db.relationship('Forest', backref='owner', uselist=False)
 
 class Forest(db.Model):
     forest_id = db.Column(db.Integer, primary_key=True)

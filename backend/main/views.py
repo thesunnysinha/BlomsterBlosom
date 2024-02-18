@@ -1,9 +1,11 @@
 from flask_restful import Resource
 from main.serializers import CombinedForestOwnerDataSchema
 from flask import request
-from app import db
-from main.models import User,Forest,ForestOwner
+from db import db,bcrypt
+from .models import User,Forest,ForestOwner
 from flasgger import swag_from
+from flask_jwt_extended import create_access_token,create_refresh_token
+
 combined_forest_owner_data_schema = CombinedForestOwnerDataSchema()
 
 class ForestOwnerResource(Resource):
@@ -67,6 +69,7 @@ class ForestOwnerResource(Resource):
         forest_data = {key: data[key] for key in ['forest_name', 'location', 'soil_type']}
 
         # Create User
+        user_data['password'] = bcrypt.generate_password_hash(data['password']).decode('utf-8')
         new_user = User(**user_data)
         db.session.add(new_user)
         db.session.flush()  # Flush to get the auto-generated user_id
@@ -75,15 +78,87 @@ class ForestOwnerResource(Resource):
         new_forest_owner = ForestOwner(user_id=new_user.user_id, **owner_data)
         db.session.add(new_forest_owner)
 
+        db.session.commit()
+        
         # Create Forest
         new_forest = Forest(owner_id=new_forest_owner.owner_id, **forest_data)
         db.session.add(new_forest)
-
+        
         try:
-            db.session.commit()
+            try:
+                db.session.commit()
+            except Exception as e:
+                print(str(e))
+                return {"error": str(e)}, 500
             return {"message": "ForestOwner and Forest created successfully"}, 201
         except Exception as e:
             db.session.rollback()
             return {"error": str(e)}, 500
         finally:
             db.session.close()
+            
+class LoginResource(Resource):
+    @swag_from({
+        'tags': ['Authentication'],
+        'description': 'User login API',
+        'parameters': [
+            {
+                'name': 'data',
+                'description': 'JSON data for user login.',
+                'in': 'body',
+                'required': True,
+                'schema': {
+                    'type': 'object',
+                    'properties': {
+                        'username': {'type': 'string', 'minLength': 1},
+                        'password': {'type': 'string', 'minLength': 1},
+                    },
+                    'required': ['username', 'password'],
+                },
+            },
+        ],
+        'responses': {
+            '200': {
+                'description': 'Login successful',
+                'schema': {
+                    'type': 'object',
+                    'properties': {
+                        'access_token': {'type': 'string'},
+                        'refresh_token': {'type': 'string'},
+                        'username': {'type': 'string'},
+                        'role': {'type': 'string'},
+                        'message': {'type': 'string'},
+                    },
+                },
+            },
+            '401': {
+                'description': 'Invalid username or password',
+                'schema': {
+                    'type': 'object',
+                    'properties': {
+                        'message': {'type': 'string'},
+                    },
+                },
+            },
+        },
+    })
+    def post(self):
+        data = request.get_json()
+        username = data.get('username', None)
+        password = data.get('password', None)
+
+        user = User.query.filter_by(username=username).first()
+
+        if user and bcrypt.check_password_hash(user.password, password):
+            access_token = create_access_token(identity=username, additional_claims={'role': user.role})
+            refresh_token = create_refresh_token(identity=username)
+
+            return {
+                'access_token': access_token,
+                'refresh_token': refresh_token,
+                'username': username,
+                'role': user.role,
+                'message': 'Login successful'
+            }, 200
+        else:
+            return {'message': 'Invalid username or password'}, 401
