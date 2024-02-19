@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Tabs, Tab, Box } from '@mui/material';
-import LoginPage from './LoginPage';
-import SignUpPage from './SignUpPage';
+import React, { useState } from "react";
+import { Tabs, Tab, Box } from "@mui/material";
+import LoginPage from "./LoginPage/LoginPage";
+import SignUpPage from "./SignUpPage/SignUpPage";
 
-const TabsComponent = ({setAccessToken}) => {
+const TabsComponent = ({ setAccessToken, setRole, setUsername }) => {
   const [tabValue, setTabValue] = useState(0);
 
   const handleTabChange = (event, newValue) => {
@@ -12,18 +12,21 @@ const TabsComponent = ({setAccessToken}) => {
 
   return (
     <>
-      <Tabs value={tabValue} onChange={handleTabChange} aria-label="basic tabs example">
+      <Tabs value={tabValue} onChange={handleTabChange}>
         <Tab label="Login" />
         <Tab label="Sign Up" />
       </Tabs>
       <TabPanel value={tabValue} index={0}>
-        <LoginPage setAccessToken= {setAccessToken}/>
+        <LoginPage
+          setAccessToken={setAccessToken}
+          setRole={setRole}
+          setUsername={setUsername}
+        />
       </TabPanel>
       <TabPanel value={tabValue} index={1}>
         <SignUpPage />
       </TabPanel>
     </>
-
   );
 };
 
@@ -38,11 +41,7 @@ const TabPanel = (props) => {
       aria-labelledby={`tabpanel-${index}`}
       {...other}
     >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          {children}
-        </Box>
-      )}
+      {value === index && <Box sx={{ p: 4 }}>{children}</Box>}
     </div>
   );
 };

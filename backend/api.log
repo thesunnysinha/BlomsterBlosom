@@ -6,3 +6,227 @@ WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 888-877-395
 INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 01:35:05] "[33mGET / HTTP/1.1[0m" 404 -
 INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 01:35:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 140-710-150
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 10:56:53] "OPTIONS /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 10:56:54] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 11:02:46] "OPTIONS /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 11:02:46] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 11:07:19] "OPTIONS /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 11:07:20] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/sunny/Desktop/flask/project/backend/main/auth/views.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 140-710-150
+INFO:werkzeug: * Detected change in '/home/sunny/Desktop/flask/project/backend/main/views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 140-710-150
+INFO:werkzeug: * Detected change in '/home/sunny/Desktop/flask/project/backend/auth/models.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 140-710-150
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 140-710-150
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 140-710-150
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 140-710-150
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:40:00] "GET /apidocs/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:40:00] "GET /flasgger_static/swagger-ui-bundle.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:40:00] "GET /flasgger_static/lib/jquery.min.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:40:00] "GET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:40:00] "GET /flasgger_static/swagger-ui.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:40:00] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:40:00] "GET /flasgger_static/favicon-32x32.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:43:52] "OPTIONS /api/botanical_owner HTTP/1.1" 200 -
+INFO:root:Received POST request for /api/forest_owner
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:43:52] "[35m[1mPOST /api/botanical_owner HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:44:13] "OPTIONS /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:44:13] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:47:45] "OPTIONS /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:47:46] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:47:59] "OPTIONS /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:47:59] "[31m[1mPOST /api/login HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:48:04] "OPTIONS /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:48:04] "[31m[1mPOST /api/login HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:48:40] "OPTIONS /api/forest_owner HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:48:41] "[35m[1mPOST /api/forest_owner HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:50:29] "OPTIONS /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:50:29] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:50:44] "OPTIONS /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:50:45] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:51:00] "OPTIONS /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:51:00] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:53:08] "OPTIONS /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:53:09] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:53:28] "OPTIONS /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:53:28] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:59:22] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:59:22] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:59:22] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:59:22] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:59:23] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:59:37] "OPTIONS /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 12:59:37] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:04:28] "OPTIONS /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:04:29] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:11:51] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:11:51] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:16:07] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:16:07] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:16:32] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:16:32] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:17:10] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:28:17] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:28:17] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:28:27] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:28:27] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:28:34] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:28:34] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:29:01] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:29:01] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:31:10] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:31:19] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:31:20] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:32:03] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:33:09] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:33:36] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:34:00] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:34:22] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:36:24] "OPTIONS /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:36:24] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:36:27] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:36:27] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:36:57] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:37:11] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:37:11] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:38:02] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:38:02] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:38:52] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:39:02] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:39:02] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:39:18] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:39:33] "OPTIONS /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:39:34] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:39:37] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:39:37] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:39:52] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:40:55] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:40:55] "[33mGET /api/tender HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in '/home/sunny/Desktop/flask/project/backend/main/tender/urls.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 140-710-150
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:42:00] "[31m[1mGET /api/tender HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:42:00] "[31m[1mGET /api/tender HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:45:21] "[31m[1mGET /api/tender HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:46:12] "[31m[1mGET /api/tender HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:49:10] "OPTIONS /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:49:11] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:49:14] "OPTIONS /api/tender HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:49:14] "OPTIONS /api/tender HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:49:14] "[31m[1mGET /api/tender HTTP/1.1[0m" 422 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:49:14] "[31m[1mGET /api/tender HTTP/1.1[0m" 422 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:49:36] "OPTIONS /api/tender HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:49:36] "OPTIONS /api/tender HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:49:36] "[31m[1mGET /api/tender HTTP/1.1[0m" 422 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:49:36] "[31m[1mGET /api/tender HTTP/1.1[0m" 422 -
+INFO:werkzeug: * Detected change in '/home/sunny/Desktop/flask/project/backend/main/tender/views.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 140-710-150
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:55:13] "OPTIONS /api/tender HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:55:13] "OPTIONS /api/tender HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:55:13] "[31m[1mGET /api/tender HTTP/1.1[0m" 422 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:55:13] "[31m[1mGET /api/tender HTTP/1.1[0m" 422 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:57:43] "OPTIONS /api/tender HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:57:43] "OPTIONS /api/tender HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:57:43] "[31m[1mGET /api/tender HTTP/1.1[0m" 422 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:57:43] "[31m[1mGET /api/tender HTTP/1.1[0m" 422 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:57:48] "OPTIONS /api/tender HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:57:48] "OPTIONS /api/tender HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:57:48] "[31m[1mGET /api/tender HTTP/1.1[0m" 422 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:57:48] "[31m[1mGET /api/tender HTTP/1.1[0m" 422 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:57:49] "[31m[1mGET /api/tender HTTP/1.1[0m" 422 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:57:49] "[31m[1mGET /api/tender HTTP/1.1[0m" 422 -
+INFO:werkzeug: * Detected change in '/home/sunny/Desktop/flask/project/backend/main/tender/views.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 140-710-150
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:58:34] "OPTIONS /api/tender HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:58:34] "OPTIONS /api/tender HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:58:34] "[31m[1mGET /api/tender HTTP/1.1[0m" 422 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:58:34] "[31m[1mGET /api/tender HTTP/1.1[0m" 422 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:58:34] "[31m[1mGET /api/tender HTTP/1.1[0m" 422 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 13:58:34] "[31m[1mGET /api/tender HTTP/1.1[0m" 422 -
+INFO:werkzeug: * Detected change in '/home/sunny/Desktop/flask/project/backend/main/tender/views.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 140-710-150
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 14:13:53] "OPTIONS /api/tender HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 14:13:53] "OPTIONS /api/tender HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 14:13:53] "[31m[1mGET /api/tender HTTP/1.1[0m" 422 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 14:13:53] "[31m[1mGET /api/tender HTTP/1.1[0m" 422 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 14:13:53] "[31m[1mGET /api/tender HTTP/1.1[0m" 422 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 14:13:53] "[31m[1mGET /api/tender HTTP/1.1[0m" 422 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 14:15:42] "OPTIONS /api/tender HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 14:15:42] "[31m[1mGET /api/tender HTTP/1.1[0m" 422 -
+INFO:werkzeug: * Detected change in '/home/sunny/Desktop/flask/project/backend/main/tender/views.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 140-710-150
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 14:15:50] "OPTIONS /api/tender HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 14:15:50] "OPTIONS /api/tender HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 14:15:50] "[31m[1mGET /api/tender HTTP/1.1[0m" 422 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 14:15:51] "[31m[1mGET /api/tender HTTP/1.1[0m" 422 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 14:15:51] "[31m[1mGET /api/tender HTTP/1.1[0m" 422 -
+INFO:werkzeug:127.0.0.1 - - [19/Feb/2024 14:15:51] "[31m[1mGET /api/tender HTTP/1.1[0m" 422 -
+INFO:werkzeug: * Detected change in '/home/sunny/Desktop/flask/project/backend/main/auth/views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 140-710-150
+INFO:werkzeug: * Detected change in '/home/sunny/Desktop/flask/project/backend/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat

@@ -1,14 +1,11 @@
 from flask_restful import Resource
-from main.serializers import CombinedForestOwnerDataSchema,CombinedBotanicalOwnerDataSchema
+from .serializers import CombinedForestOwnerDataSchema,CombinedBotanicalOwnerDataSchema
 from flask import request
 from db import db,bcrypt
 from .models import User,Forest,ForestOwner,BotanicalOwner
 from flasgger import swag_from
 from flask_jwt_extended import create_access_token,create_refresh_token
 import logging
-
-# Configure logging
-logging.basicConfig(filename='api.log', level=logging.DEBUG)
 
 combined_forest_owner_data_schema = CombinedForestOwnerDataSchema()
 combined_botanical_owner_data_schema = CombinedBotanicalOwnerDataSchema()

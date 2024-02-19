@@ -24,5 +24,6 @@ yarn-error.log*
 
 migrations/
 __pycache__/
+node_modules/
 
-api.log 
+*.log

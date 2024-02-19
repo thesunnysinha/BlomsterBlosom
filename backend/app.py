@@ -5,8 +5,13 @@ import secrets
 from flask_jwt_extended import JWTManager
 from flask_cors import CORS
 from flask_migrate import Migrate
-from main.urls import register_urls
+from main.auth.urls import auth_urls
+from main.tender.urls import tender_urls
 from db import db
+import logging
+
+# Configure logging
+# logging.basicConfig(filename='api.log', level=logging.DEBUG)
 
 jwt_secret_key = secrets.token_hex(32)
 
@@ -50,7 +55,8 @@ if __name__ == '__main__':
             print(f"Error creating tables: {e}")
             
         # Register API endpoints
-        register_urls(api)
+        auth_urls(api)
+        tender_urls(api)
 
     # Run the Flask application in debug mode
     app.run(debug=True)
