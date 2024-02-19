@@ -36,6 +36,10 @@ const Navbar = ({ setAccessToken, username, role }) => {
     navigate("/tender");
   };
 
+  const handleDelayResponse = () => {
+    navigate("/delayResponse");
+  };
+
   return (
     <AppBar position="static" sx={{ backgroundColor: "green" }}>
       <Toolbar>
@@ -52,6 +56,9 @@ const Navbar = ({ setAccessToken, username, role }) => {
           <Typography variant="h6" sx={{ padding: "10px" }}>
             <Button color="inherit" onClick={handleTender}>
               Tender
+            </Button>
+            <Button color="inherit" onClick={handleDelayResponse}>
+              Delay Resposne
             </Button>
           </Typography>
           <IconButton

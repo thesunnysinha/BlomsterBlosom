@@ -15,7 +15,7 @@ import {
 import { API_URL } from "../../services/apiConfig";
 import CreateTenderForm from "./CreateTenderForm";
 import { makeStyles } from "@mui/styles";
-import { getRole, getAccessTocken } from "../../services/jwtService";
+import { getRole, getAccessToken } from "../../services/jwtService";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 const theme = createTheme();
@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
 // Functional component
 const Tender = () => {
   const role = getRole();
-  const accessToken = getAccessTocken();
+  const accessToken = getAccessToken();
 
   const classes = useStyles();
   const [tenders, setTenders] = useState([]);

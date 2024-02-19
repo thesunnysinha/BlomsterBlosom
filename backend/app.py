@@ -7,11 +7,12 @@ from flask_cors import CORS
 from flask_migrate import Migrate
 from main.auth.urls import auth_urls
 from main.tender.urls import tender_urls
+from main.delay_response.urls import delay_urls
 from db import db
 import logging
 
 # Configure logging
-# logging.basicConfig(filename='api.log', level=logging.DEBUG)
+logging.basicConfig(filename='api.log', level=logging.DEBUG)
 
 jwt_secret_key = secrets.token_hex(32)
 
@@ -57,6 +58,7 @@ if __name__ == '__main__':
         # Register API endpoints
         auth_urls(api)
         tender_urls(api)
+        delay_urls(api)
 
     # Run the Flask application in debug mode
     app.run(debug=True)

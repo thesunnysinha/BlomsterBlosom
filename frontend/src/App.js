@@ -9,6 +9,7 @@ import Layout from "./components/Layout/Layout";
 import LoginSignupPage from "./components/Auth/LoginSignupPage";
 import HomeComponent from "./components/HomeComponent";
 import Tender from "./components/Tender/Tender";
+import DelayResposne from "./components/DelayResponse/DelayResposne";
 
 const App = () => {
   const [accessToken, setAccessToken] = useState(null);
@@ -64,6 +65,10 @@ const App = () => {
           <Route
             path="tender"
             element={<PrivateRoute element={<Tender role={role} />} />}
+          />
+          <Route
+            path="delayResponse"
+            element={<PrivateRoute element={<DelayResposne />} />}
           />
         </Route>
       </Routes>

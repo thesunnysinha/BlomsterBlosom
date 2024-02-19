@@ -5,7 +5,7 @@ from main.auth.models import User,ForestOwner
 from flask import request
 from datetime import datetime
 from db import db
-from flasgger import swag_from
+# from flasgger import swag_from
 
 def forest_owner_required(fn):
     @jwt_required()

@@ -1,4 +1,4 @@
-export const getAccessTocken = () => {
+export const getAccessToken = () => {
   return localStorage.getItem("access_token");
 };
 
